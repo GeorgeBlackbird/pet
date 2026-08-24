@@ -2,7 +2,12 @@
   <nav :class="$style.sidebar" aria-label="Основная навигация">
     <div class="p-4 font-semibold">Workspace</div>
     <ul class="flex flex-col gap-1 px-2">
-      <li><NuxtLink to="/">Dashboard</NuxtLink></li>
+      <li>
+        <NuxtLink to="/">Dashboard</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink to="/dev/ui-kit" class="text-muted-foreground text-sm"> UI Kit (dev) </NuxtLink>
+      </li>
     </ul>
   </nav>
 </template>
