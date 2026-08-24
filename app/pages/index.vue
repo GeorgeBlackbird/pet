@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-const user = useSupabaseUser()
-const client = useSupabaseClient()
-console.log(user.value, !!client)
+definePageMeta({
+  middleware: 'auth',
+})
 </script>

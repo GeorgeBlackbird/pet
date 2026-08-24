@@ -1,12 +1,8 @@
 <script setup lang="ts">
 import { ChevronDown, LogOut, Settings, User } from '@lucide/vue'
-import { toast } from 'vue-sonner'
+import { useAuthStore } from '~/stores/auth'
 
-function onLogoutStub() {
-  toast.message('Logout', {
-    description: 'Заглушка',
-  })
-}
+const auth = useAuthStore()
 </script>
 
 <template>
@@ -19,7 +15,7 @@ function onLogoutStub() {
           <span
             class="bg-muted text-muted-foreground flex size-7 items-center justify-center rounded-full text-xs font-medium"
           >
-            G
+            {{ auth.displayName[0]?.toUpperCase() }}
           </span>
           <span class="hidden sm:inline">Георгий</span>
           <ChevronDown class="text-muted-foreground size-4" />
@@ -29,8 +25,8 @@ function onLogoutStub() {
       <DropdownMenuContent class="w-52" align="end">
         <DropdownMenuLabel>
           <div class="flex flex-col gap-0.5">
-            <span>Георгий</span>
-            <span class="text-muted-foreground text-xs font-normal"> demo@workspace.local </span>
+            <span>{{ auth.displayName }}</span>
+            <span class="text-muted-foreground text-xs font-normal"> {{ auth.email }} </span>
           </div>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
@@ -43,7 +39,7 @@ function onLogoutStub() {
           Settings
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem variant="destructive" @select="onLogoutStub">
+        <DropdownMenuItem variant="destructive" @select="auth.signOut">
           <LogOut />
           Log out
         </DropdownMenuItem>
