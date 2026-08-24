@@ -1,13 +1,13 @@
 <template>
-  <AppShell>
+  <LayoutAppShell>
     <template #sidebar>
-      <AppSidebar />
+      <LayoutAppSidebar />
     </template>
 
     <template #header>
-      <AppHeader />
+      <LayoutAppHeader />
     </template>
 
     <slot />
-  </AppShell>
+  </LayoutAppShell>
 </template>

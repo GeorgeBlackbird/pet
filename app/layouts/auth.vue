@@ -1,5 +1,5 @@
 <template>
-  <AuthShell>
+  <LayoutAuthShell>
     <slot />
-  </AuthShell>
+  </LayoutAuthShell>
 </template>
