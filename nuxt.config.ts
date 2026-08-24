@@ -7,12 +7,11 @@ export default defineNuxtConfig({
     typeCheck: true,
   },
 
-  modules: [
-    '@nuxt/eslint',
-    '@nuxtjs/tailwindcss',
-  ],
+  modules: ['@nuxt/eslint', '@nuxtjs/tailwindcss'],
 
-  css: ['~/assets/styles/tailwind.css'],
+  tailwindcss: {
+    cssPath: '~/assets/styles/tailwind.css',
+  },
 
   vite: {
     css: {
