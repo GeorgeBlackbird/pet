@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     typeCheck: true,
   },
 
-  modules: ['@nuxt/eslint'],
+  modules: ['@nuxt/eslint', 'shadcn-nuxt'],
 
   css: ['~/assets/styles/tailwind.css'],
 
@@ -22,5 +22,10 @@ export default defineNuxtConfig({
         },
       },
     },
+  },
+
+  shadcn: {
+    prefix: '',
+    componentDir: './app/components/ui',
   },
 })
