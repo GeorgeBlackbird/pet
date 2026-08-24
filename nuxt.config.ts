@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     typeCheck: true,
   },
 
-  modules: ['@nuxt/eslint', 'shadcn-nuxt'],
+  modules: ['@nuxt/eslint', 'shadcn-nuxt', '@nuxtjs/supabase', '@pinia/nuxt'],
 
   css: ['~/assets/styles/tailwind.css'],
 
@@ -27,5 +27,9 @@ export default defineNuxtConfig({
   shadcn: {
     prefix: '',
     componentDir: './app/components/ui',
+  },
+
+  supabase: {
+    redirect: false,
   },
 })
