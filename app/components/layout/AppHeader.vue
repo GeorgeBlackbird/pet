@@ -17,7 +17,7 @@ const auth = useAuthStore()
           >
             {{ auth.displayName[0]?.toUpperCase() }}
           </span>
-          <span class="hidden sm:inline">Георгий</span>
+          <span class="hidden sm:inline">{{ auth.displayName }}</span>
           <ChevronDown class="text-muted-foreground size-4" />
         </Button>
       </DropdownMenuTrigger>

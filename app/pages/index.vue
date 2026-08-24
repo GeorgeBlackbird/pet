@@ -4,9 +4,3 @@
     <p>Контент попадает в main area default layout.</p>
   </div>
 </template>
-
-<script setup lang="ts">
-definePageMeta({
-  middleware: 'auth',
-})
-</script>
